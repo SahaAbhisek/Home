@@ -4,28 +4,334 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/flowbite@1.4.7/dist/flowbite.min.css" />
 </head>
 <body>
   <header class="text-gray-600 body-font">
     <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
       <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-indigo-500 rounded-full" viewBox="0 0 24 24">
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-        </svg>
-        <span class="ml-3 text-xl">Tailblocks</span>
+        </svg> -->
+        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+            <img class="object-cover object-center rounded" alt="Abhisek.jpg" src="me.jpg" width="80" height=80>
+        </div>
+        <span class="ml-1 text-xl">Abhisek Saha</span>
       </a>
       <nav class="md:ml-auto md:mr-auto flex flex-wrap items-center text-base justify-center">
-        <a class="mr-5 hover:text-gray-900">First Link</a>
-        <a class="mr-5 hover:text-gray-900">Second Link</a>
-        <a class="mr-5 hover:text-gray-900">Third Link</a>
-        <a class="mr-5 hover:text-gray-900">Fourth Link</a>
+        <a class="mr-10 hover:text-blue-700" href="cv_Abhisek.pdf" target="blank">My CV</a>
+        <a class="mr-10 hover:text-blue-700" href="research_statement.pdf" target="blank">Research Interest</a>
+        <a>
+            <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">My Profiles <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+            <!-- Dropdown menu -->
+            <div id="dropdownNavbar" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                  <li>
+                    <a href="https://github.com/SahaAbhisek" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" target="blank">Github</a>
+                  </li>
+                  <li>
+                    <a href="https://www.researchgate.net/profile/Abhisek-Saha" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" target="blank">ResearchGate</a>
+                  </li>
+                  <li>
+                    <a href="https://www.linkedin.com/in/abhisek-saha-15aa20137/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" target="blank">LinkedIn</a>
+                  </li>
+                </ul>
+                
+            </div>
+        </a>
+        <a class="mr-10 hover:text-blue-700"></a>
+        <a class="mr-10 hover:text-blue-700">Useful Links</a>
       </nav>
-      <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Button
+
+      <!-- <nav class="px-2 bg-white border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+          <a href="#" class="flex items-center">
+              <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Abhisek Saha</span>
+          </a>
+
+          <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
+            <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                <li class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 dark:hover:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent"></li>
+                <li>
+                <a href="#" class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent" aria-current="page">Home</a>
+              </li>
+              <li>
+                <button id="dropdownNavbarLink" data-dropdown-toggle="dropdownNavbar" class="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 md:w-auto dark:text-gray-400 dark:hover:text-white dark:focus:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Useful Links <svg class="w-4 h-4 ml-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                Dropdown menu
+                <div id="dropdownNavbar" class="z-10 hidden bg-white divide-y divide-gray-100 rounded shadow w-44 dark:bg-gray-700 dark:divide-gray-600">
+                    <ul class="py-1 text-sm text-gray-700 dark:text-gray-400" aria-labelledby="dropdownLargeButton">
+                      <li>
+                        <a href="https://github.com/SahaAbhisek" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" target="blank">Github</a>
+                      </li>
+                      <li>
+                        <a href="https://www.researchgate.net/profile/Abhisek-Saha" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" target="blank">ResearchGate</a>
+                      </li>
+                      <li>
+                        <a href="https://www.linkedin.com/in/abhisek-saha-15aa20137/" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" target="blank">LinkedIn</a>
+                      </li>
+                    </ul>
+                    
+                </div>
+              </li>
+              <li>
+                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 dark:hover:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Services</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 dark:hover:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Pricing</a>
+              </li>
+              <li>
+                <a href="#" class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 dark:hover:text-white dark:border-gray-700 dark:hover:bg-gray-700 md:dark:hover:bg-transparent">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav> -->
+
+
+      <button class="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">Contact Me
         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-1" viewBox="0 0 24 24">
           <path d="M5 12h14M12 5l7 7-7 7"></path>
         </svg>
       </button>
     </div>
   </header>
+
+  <hr>
+  <div class="container mx-auto flex px-5 py-12 md:flex-row flex-col items-center">
+    <h4>Senior Research Fellow <br>
+        <a class="hover:text-blue-700" href="http://sop.uohyd.ac.in/" target="blank">School of Physics</a>, 
+        <a class="hover:text-blue-700" href="https://uohyd.ac.in/" target="blank">University of Hyderabad</a>  <br>
+        Gachibowli, Hyderabad, pin-500046, Telangana, India <br><br>
+        E-mail: 
+        <ul>
+            <a href="mailto:abhisek1saha@gmail.com">abhisek1saha@gmail.com</a><br>
+            <a href="17phph12@uohyd.ac.in">17phph12@uohyd.ac.in</a>
+        </ul>
+        
+    </h4>
+  </div>
+
+  <div class="container mx-auto flex px-5 py-5 md:flex-row flex-col items-center">
+    <h1><b>Field of scientific interests:</b></h1>
+    <br>
+    <ul>
+        <li>Heavy-Ion Collision(HIC) Physics</li>
+        <li>Properties of Quark-Gluon Plasma</li>
+        <li>Phase transition from hadronic to partonic matter</li>
+        <li>Dilepton, strangeness and charm production</li>
+        <li>Hadron properties in hot/dense nuclear matter</li>
+        <li>Dynamical description of strongly-interacting systems</li>
+        <li>Machine Learning and Deep Learning</li>
+        <li>HIC Simulation modelling</li>
+    </ul>
+
+  </div>
+  
+  <!-- ######################## -->
+
+  <section class="text-gray-600 body-font">
+    <div class="container mx-auto flex px-5 py-8 md:flex-row flex-col items-center">
+      <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Machine Learning model driven prediction of the initial geometry
+          <br class="hidden lg:inline-block">in Heavy-Ion Collision experiments.
+        </h1>
+        <h2><b>Authors:</b> <b>Abhisek Saha</b>, Debasis Dan, Soma Sanyal
+        </h2>
+        <br>
+        <p class="mb-8 leading-relaxed"><b>Abstract:</b> We demonstrate high prediction accuracy of three important properties that determine the ini-
+            tial geometry of the heavy-ion collision (HIC) experiments by using supervised Machine Learning
+            (ML) methods. These properties are the impact parameter, the eccentricity and the participant
+            eccentricity. Though ML techniques have been used previously to determine the impact parameter
+            of these collisions, we study multiple ML algorithms, their error spectrum, and sampling methods 
+            using exhaustive parameter scans and ablation studies to determine a combination of efficient
+            algorithm and tuned training set that gives multi-fold improvement in accuracy for all three different 
+            heavy-ion collision models. The three models chosen are a transport model, a hydrodynamic
+            model and a hybrid model. The motivation of using three different heavy-ion collision models
+            was to show that even if the model is trained using a transport model, it gives accurate results
+            for a hydrodynamic model as well as a hybrid model. We show that the accuracy of the impact
+            parameter prediction depends on the centrality of the collision. With the standard application of
+            ML training methods, prediction accuracy is considerably low for central collisions. Our method
+            increases this accuracy by multiple folds. We also show that the eccentricity prediction accuracy
+            can be improved by inclusion of the impact parameter as a feature in all these algorithms. We
+            discuss how the errors can be minimized and the accuracy can be improved to a great extent in all
+            the ranges of impact parameter and eccentricity predictions.</p>
+        <div class="flex justify-center">
+          <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" onclick="window.open('https://arxiv.org/abs/2203.15433','_blank')" type="button">arXiv:2203.15433</button>
+          <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"onclick="window.open('https://doi.org/10.1103/PhysRevC.00.004900','_blank')" type="button">Phys. Rev. C 00, 004900 (2022)</button>
+        </div>
+      </div>
+      <!-- <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
+      </div> -->
+    </div>
+  </section>
+
+  <hr>
+  <!-- ######################## -->
+
+  <section class="text-gray-600 body-font">
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Anisotropic turbulence in relativistic plasmas.
+          <br class="hidden lg:inline-block">
+        </h1>
+        <h2><b>Authors:</b> <b>Abhisek Saha</b>, Soma Sanyal
+        </h2>
+        <br>
+        <p class="mb-8 leading-relaxed"><b>Abstract:</b> Signs of turbulence have been observed at the relativistic heavy-ion collision at high collision
+            energies. We study the signatures of turbulence in this system and find that there are significant departures
+            from isotropic turbulence in the initial and the pre-equilibrium stages of the collision. As the anisotropic
+            fluctuations are subleading to the isotropic fluctuations, the Kolmogorov spectrum can usually be obtained
+            even for the initial stages. However, the energy spectrum and the temperature fluctuations indicate deviations 
+            from isotropic turbulence. Since a strong momentum anisotropy exists between the transverse and
+            the longitudinal plane, we study the energy density spectrum in these two planes by slicing the sphere
+            into different planes. The geometrical anisotropy is reflected in the anisotropic turbulence generated in the
+            rotating plasma and we find that the scaling exponent is different in the two planes. We also obtain the
+            temperature spectrum in the pre-equilibrium stages. The spectrum deviates from the Gaussian spectra
+            expected for an isotropic turbulence. All these seem to indicate that the large scale momentum anisotropy
+            persists in the smaller length scales for the relativistic heavy-ion collisions.</p>
+        <div class="flex justify-center">
+          <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" onclick="window.open('https://arxiv.org/abs/2108.01847','_blank')" type="button">arXiv:2108.01847</button>
+          <!-- <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"onclick="window.open('https://doi.org/10.1103/PhysRevC.00.004900','_blank')" type="button">Phys. Rev. C 00, 004900 (2022)</button> -->
+        </div>
+      </div>
+      <!-- <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
+      </div> -->
+    </div>
+  </section>
+
+
+  <hr>
+  <!-- ######################## -->
+
+  <section class="text-gray-600 body-font">
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Temperature fluctuations and Tsallis statistics 
+          <br class="hidden lg:inline-block"> in relativistic heavy ion collisions
+        </h1>
+        <h2><b>Authors:</b> <b>Abhisek Saha</b>, Soma Sanyal
+        </h2>
+        <br>
+        <p class="mb-8 leading-relaxed"><b>Abstract:</b> In this paper, we study temperature ﬂuctuations in the initial stages of the relativistic
+            heavy ion collision using a multiphase transport model. We consider the plasma in the
+            initial stages after collision before it has a chance to equilibrate. We have considered
+            Au + Au collision with a center-of-mass energy of 200 GeV. We use the nonextensive
+            Tsallis statistics to ﬁnd the entropic index in the partonic stages of the relativistic
+            heavy ion collisions. We ﬁnd that the temperature and the entropic index have a linear
+            relationship during the partonic stages of the heavy ion collision. This has already been
+            observed in the hadronic phase. A detailed analysis of the dependence of the entropic
+            index on the system shows that for increasing spacetime rapidity, the entropic index of
+            the partonic system increases. The entropic index also depends on the beam collision
+            energy. The calculation of the entropic index from the experimental data ﬁtting of the
+            transverse momenta deals with the hadronic phase. However, our study shows that the
+            behavior of the entropic index in the initial nonequilibrium stage of the collision is very
+            similar to the behavior of the entropic index in the hadronic stage.</p>
+        <div class="flex justify-center">
+          <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" onclick="window.open('https://arxiv.org/abs/2004.03118','_blank')" type="button">arXiv:2004.03118</button>
+          <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"onclick="window.open('https://doi.org/10.1142/S0217732321501522','_blank')" type="button">Mod. Phys. Lett. A Vol. 36, No. 22, 2150152 (2021)</button>
+        </div>
+      </div>
+      <!-- <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
+      </div> -->
+    </div>
+  </section>
+
+
+  <hr>
+  <!-- ######################## -->
+
+  <section class="text-gray-600 body-font">
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Flow and vorticity with varying chemical potential
+          <br class="hidden lg:inline-block"> in relativistic heavy ion collisions
+        </h1>
+        <h2><b>Authors:</b> <b>Abhisek Saha</b>, Soma Sanyal
+        </h2>
+        <br>
+        <p class="mb-8 leading-relaxed"><b>Abstract:</b> We study the vorticity patterns in relativistic heavy ion collisions with respect to the
+            collision energy. The collision energy is related to the chemical potential used in the 
+            thermal - statistical models that assume approximate chemical equilibrium after the 
+            relativistic collision. We use the multiphase transport model (AMPT) to study the vorticity
+            in the initial parton phase as well as the ﬁnal hadronic phase of the relativistic heavy
+            ion collision. We ﬁnd that as the chemical potential increases, the vortices are larger in
+            size. Using diﬀerent deﬁnitions of vorticity, we ﬁnd that vorticity plays a greater role at
+            lower collision energies than at higher collision energies. We also look at other eﬀects
+            of the ﬂow patterns related to the shear viscosity at diﬀerent collision energies. We ﬁnd
+            that the shear viscosity obtained is almost a constant with a small decrease at higher
+            collision energies. We also look at the elliptic ﬂow as it is related to viscous eﬀects in
+            the ﬁnal stages after the collision. Our results indicate that the viscosity plays a greater
+            role at higher chemical potential and lower collision energies.</p>
+        <div class="flex justify-center">
+          <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" onclick="window.open('https://arxiv.org/abs/1902.08368','_blank')" type="button">arXiv:1902.08368</button>
+          <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"onclick="window.open('https://dx.doi.org/10.1142/S0218301320500019','_blank')" type="button">Int. J. Mod. Phys. E Vol. 29, No. 01, 2050001 (2020)</button>
+        </div>
+      </div>
+      <!-- <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
+      </div> -->
+    </div>
+  </section>
+
+
+  <hr>
+  <!-- ######################## -->
+
+  <section class="text-gray-600 body-font">
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Decay of baryon inhomogeneities in an expanding universe.
+          <br class="hidden lg:inline-block">
+        </h1>
+        <h2><b>Authors:</b> Pratik K. Das, Sovan Sau, <b>Abhisek Saha</b>, Soma Sanyal
+        </h2>
+        <br>
+        <p class="mb-8 leading-relaxed"><b>Abstract:</b> Baryon inhomogeneities are generated early in the universe. These inhomogeneities affect the phase transition dynamics of subsequent phase transitions, they also affect the nucleosynthesis calculations. We study the decay of 
+            the inhomogeneities in the early universe using the diffusion equation in the Friedmann–Lemaître–Robertson–Walker metric. We calculate the interaction cross section of the quarks with the neutrinos, the electrons and the muons and obtain the diffusion coefficients. The 
+            diffusion coefficients are temperature dependent. We find that the expansion of the universe causes the inhomogeneities to decay at a faster rate. We find that the baryon inhomogeneities generated at the electroweak epoch have low amplitudes at the time of the quark hadron 
+            transition and hence will not affect the phase transition dynamics unless they are generated with a amplitude greater than 105 times the background density. After the quark hadron transition, we include the interaction of the muons with the hadrons till 100 MeV. We find that
+             large density inhomogeneities generated during the quark hadron transition with sizes of the order of 1 km must have amplitudes greater than 105 times the background density to survive upto the nucleosynthesis epoch. This puts constraints on any models that generate these inhomogeneities.</p>
+        <div class="flex justify-center">
+          <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" onclick="window.open('https://arxiv.org/abs/2101.01980','_blank')" type="button">arXiv:2101.01980 [hep-ph]</button>
+          <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"onclick="window.open('https://doi.org/10.1140/epjc/s10052-021-09561-3','_blank')" type="button">Eur. Phys. J. C 81, 816 (2021)</button>
+        </div>
+      </div>
+      <!-- <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
+      </div> -->
+    </div>
+  </section>
+
+
+  <hr>
+  <!-- ######################## -->
+
+  <section class="text-gray-600 body-font">
+    <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+      <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Diffusion of massive particles around an Abelian-Higgs string.
+          <br class="hidden lg:inline-block">
+        </h1>
+        <h2><b>Authors:</b> <b>Abhisek Saha</b>, Soma Sanyal</h2>
+        <br>
+        <p class="mb-8 leading-relaxed"><b>Abstract:</b> We study the diffusion of massive particles in the space time of an Abelian Higgs string. The particles in the early universe plasma execute Brownian motion. This motion of the particles is modeled as
+             a two dimensional random walk in the plane of the Abelian Higgs string. The particles move randomly in the space time of the string according to their geodesic equations. We observe that for certain values of their energy and angular momentum, 
+             an overdensity of particles is observed close to the string. We find that the string parameters determine the distribution of the particles. We make an estimate of the density fluctuation generated around the string as a function of the deficit angle.
+              Though the thickness of the string is small, the length is large and the overdensity close to the string may have cosmological consequences in the early universe.</p>
+        <div class="flex justify-center">
+          <button class="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" onclick="window.open('https://arxiv.org/abs/1710.05556','_blank')" type="button">arXiv:1710.05556 [hep-ph]</button>
+          <button class="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg"onclick="window.open('https://doi.org/10.1088/1475-7516/2018/03/022','_blank')" type="button">JCAP03(2018)022</button>
+        </div>
+      </div>
+      <!-- <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+        <img class="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600">
+      </div> -->
+    </div>
+  </section>
+
+  <script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
 </body>
 </html>
